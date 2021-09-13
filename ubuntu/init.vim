@@ -24,6 +24,7 @@ Plug 'nvim-telescope/telescope.nvim'
 " Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'tmsvg/pear-tree'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " clorscheme gruvbox
