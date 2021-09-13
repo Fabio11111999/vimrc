@@ -24,6 +24,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'tmsvg/pear-tree'
 Plug 'junegunn/seoul256.vim'
+Plug 'itchyny/lightline.vim'
 " Plug 'preservim/nerdtree'
 call plug#end()
 
