@@ -25,6 +25,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/seoul256.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'itchyny/lightline.vim'
+" Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " clorscheme gruvbox
@@ -36,7 +37,8 @@ map <C-a> <esc>ggVG<CR>
 map! <C-a> <esc>ggVG<CR>
 
 :let $CXX      = 'g++'
-:let $CXXFLAGS = '-std=c++17 -O2 -Wall -Wextra' " -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG'
+:let $CXXFLAGS = '-std=c++17 -O2 -Wall -Wextra'
+" :let $CXXFLAGS = '-std=c++17 -O2 -Wall -Wextra	-fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG'
 nnoremap <F1> :term <CR>i 
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
@@ -59,6 +61,14 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
 if executable(s:clip)
