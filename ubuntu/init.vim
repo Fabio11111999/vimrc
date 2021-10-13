@@ -21,16 +21,17 @@ set incsearch
 
 call plug#begin('/home/fabiomarchesi/.config/nvim/plugged')
 Plug 'nvim-telescope/telescope.nvim'
-" Plug 'gruvbox-community/gruvbox'
-Plug 'junegunn/seoul256.vim'
+Plug 'sjl/badwolf'
 Plug 'tmsvg/pear-tree'
 Plug 'itchyny/lightline.vim'
-" Plug 'vim-syntastic/syntastic'
 call plug#end()
 
-" clorscheme gruvbox
-let g:seoul256_background = 233
-colo seoul256
+
+" Color-scheme
+colorscheme badwolf
+let g:badwolf_darkgutter = 1
+
+
 
 let g:pear_tree_repeatable_expand=0
 map <C-a> <esc>ggVG<CR>
