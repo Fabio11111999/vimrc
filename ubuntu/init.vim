@@ -24,8 +24,6 @@ call plug#begin('/home/fabiomarchesi/.config/nvim/plugged')
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'sjl/badwolf'
 Plug 'tmsvg/pear-tree'
@@ -35,8 +33,8 @@ call plug#end()
 
 
 " Color-scheme
-" colorscheme badwolf
-" let g:badwolf_darkgutter = 1
+"colorscheme badwolf
+let g:badwolf_darkgutter = 1
 colorscheme spacecamp
 
 let g:pear_tree_repeatable_expand=0
@@ -44,8 +42,8 @@ map <C-a> <esc>ggVG<CR>
 map! <C-a> <esc>ggVG<CR>
 
 :let $CXX     = 'g++'
-:let $CXXFLAGS = '-std=c++17 -O2 -Wall -Wextra'
-":let $CXXFLAGS = '-std=c++17 -O2 -Wall -Wextra	-fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG'
+":let $CXXFLAGS = '-std=c++17 -O2 -Wall -Wextra'
+:let $CXXFLAGS = '-std=c++17 -O2 -Wall -Wextra	-fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG'
 nnoremap <F1> :term <CR>i 
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
